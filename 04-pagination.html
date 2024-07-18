@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion component</title>
+    <!-- google CDN fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- bootstrap icons CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- the main styling  -->
+    <style>
+      /* main-color: #087f5b
+      Gray color: #343a40 
+      */
+      :root {
+        --main-color: #087f5b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pagination {
+        /* width: 500px;
+        margin:290px auto; */
+        margin-top: 50vh;
+        transform: translate(0, -50%);
+        display: flex;
+        gap:12px;
+        /* justify-content: space-between; */
+        align-items: center;
+      }
+
+      .page-link:link,
+      .page-link:visited{
+        text-align: center;
+        text-decoration: none;
+        width: 48px;
+        height: 48px;
+        /* border: 2px so lid #fff; */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-color);
+        transition: all 0.5s;
+      }
+
+      .page-link:hover,
+      .page-link:active,
+      .pagination .active{
+        background-color: var(--main-color);
+        color: #fff;
+      }
+
+       /* icons */
+      .pagination-icon {
+        color: var(--main-color);
+        background-color: #fff;
+        font-size: 32px;
+        border-radius: 50%;
+        padding: 5px;
+        /* position: absolute; */
+        border: solid var(--main-color) 1px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      
+      .pagination-icon:hover {
+        color: #fff;
+        background-color: var(--main-color);
+        transform: scale(1.2);
+      }
+
+      .dots {
+        color: var(--main-color);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="pagination">
+      <i class="bi bi-chevron-double-left pagination-icon left-icon"></i>
+      <a class="page-link" href="#">1</a>
+      <a class="page-link" href="#">2</a>
+      <a class="page-link active" href="#">3</a>
+      <a class="page-link" href="#">4</a>
+      <a class="page-link" href="#">5</a>
+      <a class="page-link" href="#">6</a>
+      <span class="dots">...</span>
+      <a class="page-link" href="#">23</a>
+      <i class="bi bi-chevron-double-right pagination-icon right-icon"></i>
+    </div>
+
+  </body>
+
+</html

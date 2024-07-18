@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion component</title>
+    <!-- google CDN fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- bootstrap icons CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- the main styling  -->
+    <style>
+      /* main-color: #087f5b
+      Gray color: #343a40 
+      */
+      :root {
+        --main-color: #087f5b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+      }
+
+      .item {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px
+      }
+
+      .number,
+      .item-title {
+        font-size: 24px;
+        /*color: var(--main-color)*/
+        ;
+        font-weight: 600;
+      }
+
+      .number {
+        color: #ced4da;
+      }
+
+      .icon {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--main-color);
+      }
+
+      .active {
+        border-top: 5px solid var(--main-color);
+      }
+
+      .active .hiddenbox {
+        display: block;
+      }
+
+      .active .number,
+      .active .item-title {
+        color: var(--main-color);
+      }
+
+      .hiddenbox {
+        grid-column: 2;
+        display: none;
+      }
+
+      .hiddenbox p {
+        line-height: 1.6;
+        margin-bottom: 30px
+      }
+
+      .hiddenbox ul {
+        color: #868e96;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="item-title">Where are these chairs assembled?</p>
+        <i class="bi bi-chevron-double-down icon"></i>
+        <div class="hiddenbox">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dicta nostrum porro praesentium ad possimus,
+            quam nesciunt adipisci laudantium iste!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Id fuga debitis quas asperiores facere delectus beatae.</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item active">
+        <p class="number">02</p>
+        <p class="item-title">How long do I have to return my chair?</p>
+        <i class="bi bi-chevron-double-down icon"></i>
+        <div class="hiddenbox">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dicta nostrum porro praesentium ad possimus,
+            quam nesciunt adipisci laudantium iste!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Id fuga debitis quas asperiores facere delectus beatae.</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="number">03</p>
+        <p class="item-title">Do you ship to countries outside the EU?</p>
+        <i class="bi bi-chevron-double-down icon"></i>
+        <div class="hiddenbox">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dicta nostrum porro praesentium ad possimus,
+            quam nesciunt adipisci laudantium iste!</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Id fuga debitis quas asperiores facere delectus beatae.</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+            <li>nostrum dolorem tempora natus. Adipisci!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html

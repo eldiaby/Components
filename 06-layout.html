@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Layout</title>
+  <!-- bootstrap icons CDN link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- styling -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      color: #343a40;
+      font-size: 24px;
+      height: 100vh;
+      text-align: center;
+      font-weight: bold;
+
+      /* layout styling */
+      display: grid;
+      grid-template-columns: 80px 400px 1fr 250px;
+      grid-template-rows: 80px 1fr;
+    }
+
+    nav,section,main,aside {
+      padding-top: 25px;
+    }
+
+    nav {
+      background-color: #343a40;
+      grid-row: 1 / -1;
+      color: #fff;
+    }
+    
+
+    /* menu styling */
+    menu {
+      background-color: #7048e8;
+      grid-column: 2 / -1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 40px;
+
+    }
+
+    button {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #5f3dc4;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+    }
+
+    menu button:last-child {
+      background-color: #d6336c;
+      margin-left: auto;
+    }
+
+    /* main section styling */
+
+    section {
+      background-color: #e9ecef;
+      padding: 40px;
+      overflow: auto;
+      
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+    }
+    
+    .email {
+      text-transform: capitalize;
+      background-color: #adb5bd;
+      cursor: pointer;
+      height: 96px;
+      flex-shrink: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    aside {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    nav
+  </nav>
+  <menu>
+    <button>New</button>
+    <button>Replay</button>
+    <button>forward</button>
+    <button>Mark unread</button>
+    <button><i class="bi bi-trash-fill"></i> Trash</button>
+  </menu>
+  <section>
+    <div class="email">email 1</div>
+    <div class="email">email 2</div>
+    <div class="email">email 3</div>
+    <div class="email">email 4</div>
+    <div class="email">email 5</div>
+    <div class="email">email 6</div>
+    <div class="email">email 7</div>
+    <div class="email">email 8</div>
+    <div class="email">email 9</div>
+    <div class="email">email 10</div>
+  </section>
+  <main>Email View</main>
+  <aside>Addition information</aside>
+</body>
+</html>
